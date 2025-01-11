@@ -119,7 +119,7 @@ impl A2SClient {
     #[cfg(not(feature = "async"))]
     pub fn new() -> Result<A2SClient> {
         let socket = UdpSocket::bind("0.0.0.0:0")?;
-        let timeout = Duration::new(5, 0);
+        let timeout = Duration::new(2, 0);
 
         socket.set_read_timeout(Some(timeout))?;
         socket.set_write_timeout(Some(timeout))?;
