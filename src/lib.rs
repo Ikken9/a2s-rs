@@ -132,7 +132,7 @@ impl A2SClient {
     }
 
     #[cfg(feature = "async")]
-    pub async fn new() -> Result<A2SClient> {
+    pub fn new() -> Result<A2SClient> {
         Ok(A2SClient {
             timeout: Duration::new(15, 0),
             max_size: 1400,
